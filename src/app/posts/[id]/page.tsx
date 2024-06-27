@@ -2,7 +2,7 @@ import style from './post.module.scss';
 import getPost from '@/api/getPost';
 import getPostComments from '@/api/getPostComments';
 import getUser from '@/api/getUser';
-import Comment from '@/components/comment/comment';
+import { Comment } from '@/components/comment';
 import { IUser } from '@/types/auth.types';
 import { IComment, IPost } from '@/types/post.types';
 import { Metadata } from 'next';

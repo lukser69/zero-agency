@@ -1,0 +1,33 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+	gap: 5px;
+	user-select: none;
+
+	&__loading {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+
+	&__item {
+		width: 25px;
+		height: 25px;
+		border: 1px solid var(--border);
+		border-radius: 2px;
+		padding: 2px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		cursor: pointer;
+
+		&-active {
+			width: 30px;
+			height: 30px;
+			border-color: var(--primary);
+		}
+	}
+}

@@ -2,8 +2,9 @@ import { IPost } from "@/types/post.types";
 import { myAxios } from "./axios";
 
 
-export default async function getPosts(): Promise<IPost[] | null> {
+export default async function getPosts(currentPage: number): Promise<IPost[] | null> {
   let response: IPost[] | null = null;
+  console.log('currentPage', currentPage)
   await myAxios
     .get('/posts')
     .then((res) => {
