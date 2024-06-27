@@ -1,6 +1,6 @@
 'use client';
 
-import PostCard from './postCard';
+import PostCard from '@/components/postCard/postCard';
 import styles from './posts.module.scss';
 import { useEffect, useState } from 'react';
 import { IPost } from '@/types/post.types';

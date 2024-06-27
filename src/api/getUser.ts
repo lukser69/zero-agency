@@ -1,11 +1,11 @@
-import { IPost } from "@/types/post.types";
+import { IUser } from "@/types/auth.types";
 import { myAxios } from "./axios";
 
 
-export default async function getPosts(): Promise<IPost[] | null> {
-  let response: IPost[] | null = null;
+export default async function getUser(id: number): Promise<IUser | null> {
+  let response: IUser | null = null;
   await myAxios
-    .get('/posts')
+    .get(`/users/${id}`)
     .then((res) => {
       response = res.data;
     })

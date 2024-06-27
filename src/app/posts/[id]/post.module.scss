@@ -1,0 +1,32 @@
+.post {
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: var(--primary);
+
+		margin-bottom: 40px;
+	}
+
+	&__author {
+		text-align: end;
+		font-size: small;
+		color: var(--secondary);
+
+		margin-top: 20px;
+	}
+}
+
+.comments {
+	padding: 20px;
+	margin-top: 40px;
+	border: 1px solid var(--border);
+	border-radius: 20px;
+
+	display: grid;
+	gap: 10px;
+
+	&__title {
+		font-weight: 500;
+		font-size: 1.2rem;
+	}
+}
