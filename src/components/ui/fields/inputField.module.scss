@@ -1,0 +1,43 @@
+.field__label {
+	font-weight: 500;
+	display: block;
+	margin-bottom: 2px;
+	margin-left: 4px;
+}
+.field {
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	padding: 4px 6px;
+	width: 100%;
+
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&:hover {
+		border-color: var(--secondary);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: var(--primary);
+	}
+
+	&__error {
+		border-color: var(--error);
+
+		&:hover {
+			border-color: var(--error);
+		}
+	}
+
+	&__success {
+		border-color: var(--success);
+
+		&:hover {
+			border-color: var(--success);
+		}
+	}
+}
