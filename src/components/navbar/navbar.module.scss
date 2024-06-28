@@ -1,0 +1,12 @@
+.navbar {
+	padding: 10px;
+	border-bottom: 1px solid var(--primary);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+
+	& > .navbar__user-email {
+		color: var(--primary);
+	}
+}
