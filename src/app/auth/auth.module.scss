@@ -1,0 +1,39 @@
+.auth {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& > .auth__card {
+		border: 1px solid var(--primary);
+		border-radius: 20px;
+		padding: 20px;
+
+		width: 400px;
+		height: 300px;
+
+		& > .auth__form {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			& > .auth__form-fields {
+				display: grid;
+				gap: 10px;
+
+				& > .auth__form-hint {
+					color: var(--error);
+					font-size: small;
+				}
+			}
+
+			& > .auth__form-actions {
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+}

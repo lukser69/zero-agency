@@ -2,11 +2,13 @@
 	padding: 10px;
 	border: 1px solid var(--secondary);
 	border-radius: 5px;
-	&__author {
+
+	& > .comment__author {
 		color: var(--primary);
 		margin-bottom: 5px;
 	}
-	&__name {
+
+	& > .comment__name {
 		font-weight: 500;
 	}
 }

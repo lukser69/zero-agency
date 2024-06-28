@@ -1,5 +1,5 @@
 .post {
-	&__title {
+	& > .post__title {
 		font-size: 1.5rem;
 		font-weight: 500;
 		color: var(--primary);
@@ -7,7 +7,7 @@
 		margin-bottom: 40px;
 	}
 
-	&__author {
+	& > .post__author {
 		text-align: end;
 		font-size: small;
 		color: var(--secondary);
@@ -25,7 +25,7 @@
 	display: grid;
 	gap: 10px;
 
-	&__title {
+	& > .comments__title {
 		font-weight: 500;
 		font-size: 1.2rem;
 	}

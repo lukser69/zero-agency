@@ -1,7 +1,11 @@
 :root {
 	--primary: rgb(0, 128, 128);
 	--secondary: rgba(0, 128, 128, 0.7);
+	--white: rgb(255, 255, 255);
+	--error: rgb(201, 25, 14);
+	--success: rgb(70, 152, 42);
 	--border: rgba(0, 0, 0, 0.5);
+
 	--max-width: 1400px;
 }
 

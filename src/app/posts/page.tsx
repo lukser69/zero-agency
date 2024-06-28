@@ -15,6 +15,7 @@ export default function Posts() {
 	const totalPages = 10;
 
 	useEffect(() => {
+		console.log(currentPage);
 		// Эмитируем задержку сервера
 		// и из-за этого ставим раньше начало загрузки
 		setIsLoadingPosts(true);
@@ -28,26 +29,34 @@ export default function Posts() {
 		setIsLoadingPosts(true);
 		setPosts(await getPosts(currentPage));
 		setIsLoadingPosts(false);
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
 	}
 
 	return (
 		<section>
-			<div className={styles.posts}>
-				{posts
-					? posts.map((post) => (
+			{posts ? (
+				<>
+					<div className={styles.posts}>
+						{posts.map((post) => (
 							<Link href={`/posts/${post.id}`} key={post.id}>
 								<PostCard post={post} />
 							</Link>
-					  ))
-					: ''}
-			</div>
+						))}
+					</div>
 
-			<Pagination
-				loading={isLoadingPosts}
-				currentPage={currentPage}
-				totalPages={totalPages}
-				onPageChange={setCurrentPage}
-			/>
+					<Pagination
+						loading={isLoadingPosts}
+						currentPage={currentPage}
+						totalPages={totalPages}
+						onPageChange={setCurrentPage}
+					/>
+				</>
+			) : (
+				''
+			)}
 		</section>
 	);
 }
