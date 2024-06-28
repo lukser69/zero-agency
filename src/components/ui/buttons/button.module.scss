@@ -1,0 +1,28 @@
+.button {
+	position: relative;
+	border: none;
+	border-radius: 8px;
+	height: 32px;
+	padding: 4px 12px;
+
+	outline: none;
+	user-select: none;
+
+	background-color: var(--primary);
+	color: var(--white);
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: color-mix(in srgb, var(--primary), #000 10%);
+	}
+
+	&:active {
+		background-color: color-mix(in srgb, var(--primary), #fff 10%);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
