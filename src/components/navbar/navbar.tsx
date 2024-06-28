@@ -6,7 +6,10 @@ import { Button } from '@/components/ui';
 import { authService } from '@/services/auth.service';
 import { useStore } from '@nanostores/react';
 import { userStore } from '@/stores/user.store';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getAccessToken } from '@/services/auth-token.service';
+import { setUser } from '@/stores/user.store';
+import { userData } from '@/api/auth';
 
 export default function Navbar() {
 	const user = useStore(userStore);
@@ -24,6 +27,14 @@ export default function Navbar() {
 		await authService.logout();
 		setIsLoading(false);
 	}
+
+	useEffect(() => {
+		const accessToken = getAccessToken();
+
+		if (accessToken) {
+			setUser(userData);
+		}
+	}, []);
 
 	return (
 		<nav className={styles.navbar}>

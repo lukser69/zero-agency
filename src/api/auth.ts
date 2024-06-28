@@ -4,7 +4,7 @@ const userAuthData: IAuthForm = {
   email: 'user@example.ru',
   password: '1234'
 }
-const userData: IUser = {
+export const userData: IUser = {
   id: Date.now(),
   name: "User User User",
   username: "User",

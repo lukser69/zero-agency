@@ -15,14 +15,7 @@ export default function Posts() {
 	const totalPages = 10;
 
 	useEffect(() => {
-		console.log(currentPage);
-		// Эмитируем задержку сервера
-		// и из-за этого ставим раньше начало загрузки
-		setIsLoadingPosts(true);
-
-		setTimeout(() => {
-			fetchData();
-		}, 1000);
+		fetchData();
 	}, [currentPage]);
 
 	async function fetchData() {
